@@ -17,10 +17,10 @@ from scipy.signal import butter, filtfilt
 WINDOW_SEC = 10        # seconds of signal to keep for FFT
 MIN_WINDOW_SEC = 4     # minimum seconds before attempting BPM estimation
 BPM_LOW = 45           # low end of bandpass (BPM)
-BPM_HIGH = 200         # high end of bandpass (BPM)
+BPM_HIGH = 180         # high end of bandpass (BPM)
 PLOT_HEIGHT = 120       # height of the signal plot overlay (px)
 PLOT_WIDTH = 300        # width of the signal plot overlay (px)
-FOREHEAD_FRAC = 0.4     # fraction of face bbox height to use as forehead ROI
+FOREHEAD_FRAC = 0.25     # fraction of face bbox height to use as forehead ROI
 
 
 def bandpass(signal: np.ndarray, fs: float, lo: float, hi: float, order: int = 3) -> np.ndarray:
